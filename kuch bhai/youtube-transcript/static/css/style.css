@@ -1,0 +1,94 @@
+/* Custom styles for YouTube Transcript Tool */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.url-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.75rem;
+    border: 2px solid #424242;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    color: #212121;
+}
+
+.url-input:focus {
+    border-color: #f44336;
+    box-shadow: 0 0 0 3px rgba(244, 67, 54, 0.1);
+}
+
+.action-button {
+    background: linear-gradient(45deg, #f44336, #ff6f61);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.action-button:hover {
+    box-shadow: 0 0 15px #f44336, 0 0 30px #ff6f61;
+    transform: translateY(-2px);
+}
+
+.action-button:active {
+    transform: translateY(0);
+}
+
+.transcript-container {
+    height: 400px;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+}
+
+.transcript-line {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.transcript-line:hover {
+    background-color: #3d3d3d;
+}
+
+.timestamp {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.language-selector, .translation-selector {
+    background-color: #2d2d2d;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.language-selector select, .translation-selector select {
+    background-color: #424242;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.transcript-text {
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: #f44336;
+    font-weight: 600;
+} 

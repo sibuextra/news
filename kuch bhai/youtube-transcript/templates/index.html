@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcript Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="bg-gray-900">
+    <div class="container mx-auto py-8 px-4">
+        <div id="transcript-downloader">
+            <div class="flex flex-col items-center mb-6">
+                <p class="text-4xl font-bold text-white mb-2 text-center">Generate YouTube Transcript for FREE!</p>
+                <p class="text-sm text-gray-400 mb-4">
+                    Just Paste YouTube Link – Instantly Get Transcript, Easy to Copy 
+                    <span class="wink-emoji">😉</span>
+                </p>
+                <input type="text" id="transcriptDownloaderUrl" class="url-input mb-4" placeholder="Enter YouTube video URL...">
+                <button id="generateTranscriptButton" class="action-button">Generate</button>
+            </div>
+            <div id="transcriptDownloaderOutput" class="flex justify-center flex-col">
+                <div class="transcript-area">
+                    <div class="flex transcript-downloader-container flex-row gap-4">
+                        <div class="w-1/2">
+                            <iframe src="" frameborder="0" allowfullscreen class="w-full aspect-video rounded-lg"></iframe>
+                        </div>
+                        <div class="w-1/2 transcript-container text-white">
+                            <p>Enter a YouTube URL to generate the transcript.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-4 gap-4">
+                        <button class="action-button copyTranscriptButton hidden" data-transcript="">
+                            Copy Transcript
+                        </button>
+                        <button class="action-button viewFullScriptButton hidden" data-transcript="">
+                            View Full Script
+                        </button>
+                        <button class="action-button downloadScriptButton hidden" data-transcript="" data-video-id="">
+                            Download Script
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-8 space-y-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white bg-red-500 rounded-lg p-4">Effortlessly Generate YouTube Transcripts with Copy and Translation Features! 🚀</h2>
+                        <p class="text-sm text-gray-300 mt-2">
+                            Use our tool to effortlessly extract the transcript from any YouTube video. But that's not all! We've added powerful features to make learning, creating, and sharing easier than ever.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-bold text-white bg-[#9333ea] rounded-lg p-4">Features 😎</h2>
+                        <ul class="text-sm text-gray-300 mt-2 list-disc list-inside">
+                            <li>Multiple Language Support: View transcripts in various languages</li>
+                            <li>Translation: Translate transcripts to over 10 languages</li>
+                            <li>Interactive Timestamps: Click on a line to jump to that part of the video</li>
+                            <li>Download and View: Save transcripts or view them in full-screen format</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-bold text-white bg-[#fecaca] rounded-lg p-4">How to Generate a YouTube Transcript 📃</h2>
+                        <ol class="text-sm text-gray-300 mt-2 list-decimal list-inside">
+                            <li>Paste the YouTube video link and click "Generate"</li>
+                            <li>View the transcript alongside the video</li>
+                            <li>Use the language and translation options to customize</li>
+                            <li>Copy, view in full screen, or download as needed</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/transcript.js') }}"></script>
+</body>
+</html> 
